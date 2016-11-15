@@ -28,10 +28,10 @@ public class PhotonManager : Photon.MonoBehaviour
         Debug.Log("PhotonManager OnJoinedRoom");
         //player and vrcamera generate
         GameObject prefabCamera = (GameObject)Resources.Load("Prefabs/vrcamera");
+        GameObject camera = (GameObject)Instantiate(prefabCamera, new Vector3(), Quaternion.identity);
         GameObject player = PhotonNetwork.Instantiate("Prefabs/Avatars/unitychan", new Vector3(Random.Range(-4.0f,4.0f), 0.1f, Random.Range(-4.5f, 4.5f)), Quaternion.identity, 0);
         GameObject head = player.transform.FindChild("head").gameObject;
-        GameObject camera = (GameObject)Instantiate(prefabCamera, head.transform.position, Quaternion.identity);
-        camera.transform.parent = head.transform;
+        camera.GetComponent<PositionSynchronizer>().SetSyncTarget(head);
     }
 
     void OnDisconnectedFromPhoton()

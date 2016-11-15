@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PhotonManager : Photon.MonoBehaviour
 {
-    public GameObject prefab;
     // Use this for initialization
     void Start()
     {

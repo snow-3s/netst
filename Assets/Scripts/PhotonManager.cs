@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class PhotonManager : Photon.MonoBehaviour
 {
+	
     // Use this for initialization
     void Start()
     {
@@ -27,9 +29,11 @@ public class PhotonManager : Photon.MonoBehaviour
     {
         Debug.Log("PhotonManager OnJoinedRoom");
         //player and vrcamera generate
+		int count = GameObject.FindGameObjectsWithTag("Player").Length;
+		int angle = 30;
         GameObject prefabCamera = (GameObject)Resources.Load("Prefabs/vrcamera");
         GameObject camera = (GameObject)Instantiate(prefabCamera, new Vector3(), Quaternion.identity);
-        GameObject player = PhotonNetwork.Instantiate("Prefabs/Avatars/unitychan", new Vector3(Random.Range(-4.0f,4.0f), 0.1f, Random.Range(-4.5f, 4.5f)), Quaternion.identity, 0);
+		GameObject player = PhotonNetwork.Instantiate("Prefabs/Avatars/unitychan", new Vector3(3 * Mathf.Sin(angle * count * (Mathf.PI / 180)), 0.1f, 3 * Mathf.Cos(angle * count * (Mathf.PI / 180))), Quaternion.identity, 0);
         GameObject head = player.transform.FindChild("head").gameObject;
         camera.GetComponent<PositionSynchronizer>().SetSyncTarget(head);
     }

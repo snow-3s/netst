@@ -29,7 +29,8 @@ public class PhotonManager : Photon.MonoBehaviour
     {
         Debug.Log("PhotonManager OnJoinedRoom");
         //player and vrcamera generate
-		int count = GameObject.FindGameObjectsWithTag("Player").Length;
+//		int count = GameObject.FindGameObjectsWithTag("Player").Length;
+		int count = PhotonNetwork.playerList.Length;
 		int angle = 30;
         GameObject prefabCamera = (GameObject)Resources.Load("Prefabs/vrcamera");
         GameObject camera = (GameObject)Instantiate(prefabCamera, new Vector3(), Quaternion.identity);

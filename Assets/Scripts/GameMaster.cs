@@ -21,6 +21,9 @@ public class GameMaster : Photon.MonoBehaviour
             int playerId = gameObject.GetComponent<PhotonView>().ownerId;
             gameObject.GetComponent<PlayerParameter>().SetRole(participants[playerId].GetRole());
         }
+        //ゲームマスター削除,Starter 生成
+        PhotonNetwork.InstantiateSceneObject("Prefabs/GameStarter", new Vector3(0, 2.5f, 0), Quaternion.identity, 0, null);
+        PhotonNetwork.Destroy(gameObject);
     }
 
     void Update()

@@ -14,7 +14,7 @@ public class PhotonManager : Photon.MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnJoinedLobby()
@@ -29,7 +29,6 @@ public class PhotonManager : Photon.MonoBehaviour
     {
         Debug.Log("PhotonManager OnJoinedRoom");
         //player and vrcamera generate
-//		int count = GameObject.FindGameObjectsWithTag("Player").Length;
 		int count = PhotonNetwork.playerList.Length;
 		int angle = 30;
         GameObject prefabCamera = (GameObject)Resources.Load("Prefabs/vrcamera");
@@ -37,6 +36,8 @@ public class PhotonManager : Photon.MonoBehaviour
 		GameObject player = PhotonNetwork.Instantiate("Prefabs/Avatars/unitychan", new Vector3(3 * Mathf.Sin(angle * count * (Mathf.PI / 180)), 0.1f, 3 * Mathf.Cos(angle * count * (Mathf.PI / 180))), Quaternion.identity, 0);
         GameObject head = player.transform.FindChild("head").gameObject;
         camera.GetComponent<PositionSynchronizer>().SetSyncTarget(head);
+        //GameStarter generate as SceneObject
+        PhotonNetwork.InstantiateSceneObject("Prefabs/GameStarter", new Vector3(0, 2.5f, 0), Quaternion.identity, 0, null);
     }
 
     void OnDisconnectedFromPhoton()

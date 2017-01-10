@@ -16,7 +16,11 @@ public class GameMaster : Photon.MonoBehaviour
         //参加者抽選
         participants = RoleSelecter.Run(players);
         //役職通知
-        
+        foreach (GameObject gameObject in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            int playerId = gameObject.GetComponent<PhotonView>().ownerId;
+            gameObject.GetComponent<PlayerParameter>().SetRole(participants[playerId].GetRole());
+        }
     }
 
     void Update()

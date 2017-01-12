@@ -38,6 +38,7 @@ public class PhotonManager : Photon.MonoBehaviour
         camera.GetComponent<PositionSynchronizer>().SetSyncTarget(head);
         //GameStarter generate as SceneObject
         PhotonNetwork.InstantiateSceneObject("Prefabs/GameStarter", new Vector3(0, 2.5f, 0), Quaternion.identity, 0, null);
+        ParticipantSerializer.Register();
     }
 
     void OnDisconnectedFromPhoton()

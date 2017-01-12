@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GvrControllerMain
   - GameMaster
+  - Phase
+  - Voter
   layers:
   - Default
   - TransparentFX

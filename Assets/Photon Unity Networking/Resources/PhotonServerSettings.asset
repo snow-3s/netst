@@ -39,4 +39,12 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - TaggedPlayer
+  - MinusGazed
+  - PlusGazed
+  - HangmanNotify
+  - Vote
+  - DestroySelectAreas
+  - VictimNotify
+  - NotifyRole
+  - RPCTest
   DisableAutoOpenWizard: 1

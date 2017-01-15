@@ -97,6 +97,11 @@ public class GameMaster : Photon.MonoBehaviour
         return participants.Values.ToArray();
     }
 
+    public Dictionary<int,Participant> GetParticipantsDictionary()
+    {
+        return participants;
+    }
+
     public void KillPlayer(int playerId)
     {
         participants[playerId].die();

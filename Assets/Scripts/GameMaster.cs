@@ -80,6 +80,9 @@ public class GameMaster : Photon.MonoBehaviour
                     break;
 
                 case Phase.END:
+                    //会話グループを初期化
+                    PhotonVoiceNetwork.Client.ChangeAudioGroups(new byte[] { }, new byte[] { 0 });
+                    PhotonVoiceNetwork.Client.GlobalAudioGroup = 0;
                     //ゲームマスター削除,Starter 生成
                     PhotonNetwork.InstantiateSceneObject("Prefabs/GameStarter", new Vector3(0, 2.5f, 0), Quaternion.identity, 0, null);
                     PhotonNetwork.Destroy(gameObject);

@@ -97,6 +97,12 @@ public class GameMaster : Photon.MonoBehaviour
     public void KillPlayer(int playerId)
     {
         participants[playerId].die();
+        if (PhotonNetwork.player.ID == playerId)
+        {
+            //死人のみと会話できるように
+            PhotonVoiceNetwork.Client.ChangeAudioGroups(null, new byte[] { 1 });
+            PhotonVoiceNetwork.Client.GlobalAudioGroup = 1;
+        }
     }
 
     //役職の通知&共有

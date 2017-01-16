@@ -80,6 +80,9 @@ public class GameMaster : Photon.MonoBehaviour
                     break;
 
                 case Phase.END:
+                    //会話グループを初期化
+                    PhotonVoiceNetwork.Client.ChangeAudioGroups(new byte[] { }, new byte[] { 0 });
+                    PhotonVoiceNetwork.Client.GlobalAudioGroup = 0;
                     //ゲームマスター削除,Starter 生成
                     PhotonNetwork.InstantiateSceneObject("Prefabs/GameStarter", new Vector3(0, 2.5f, 0), Quaternion.identity, 0, null);
                     PhotonNetwork.Destroy(gameObject);
@@ -94,9 +97,20 @@ public class GameMaster : Photon.MonoBehaviour
         return participants.Values.ToArray();
     }
 
+    public Dictionary<int,Participant> GetParticipantsDictionary()
+    {
+        return participants;
+    }
+
     public void KillPlayer(int playerId)
     {
         participants[playerId].die();
+        if (PhotonNetwork.player.ID == playerId)
+        {
+            //死人のみと会話できるように
+            PhotonVoiceNetwork.Client.ChangeAudioGroups(null, new byte[] { 1 });
+            PhotonVoiceNetwork.Client.GlobalAudioGroup = 1;
+        }
     }
 
     //役職の通知&共有

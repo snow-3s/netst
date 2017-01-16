@@ -1,0 +1,837 @@
+fileFormatVersion: 2
+guid: 4bce2e4d047493e4ba66bf9e1d045f00
+timeCreated: 1466854028
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: armIK.L
+    100002: armIK.L_end
+    100004: armIK.R
+    100006: armIK.R_end
+    100008: armPole.L
+    100010: armPole.L_end
+    100012: armPole.R
+    100014: armPole.R_end
+    100016: chest
+    100018: forearm.L
+    100020: forearm.R
+    100022: hand.L
+    100024: hand.L_end
+    100026: hand.R
+    100028: hand.R_end
+    100030: head
+    100032: head_end
+    100034: hips
+    100036: hips.001
+    100038: hips.002
+    100040: hips.003
+    100042: hips.004
+    100044: hips.005
+    100046: hips.006
+    100048: hips.007
+    100050: hips.007_end
+    100052: Lamia
+    100054: //RootNode
+    100056: Lamia_motion
+    100058: neck
+    100060: shoulder.L
+    100062: shoulder.R
+    100064: spine
+    100066: upper_arm.L
+    100068: upper_arm.R
+    400000: armIK.L
+    400002: armIK.L_end
+    400004: armIK.R
+    400006: armIK.R_end
+    400008: armPole.L
+    400010: armPole.L_end
+    400012: armPole.R
+    400014: armPole.R_end
+    400016: chest
+    400018: forearm.L
+    400020: forearm.R
+    400022: hand.L
+    400024: hand.L_end
+    400026: hand.R
+    400028: hand.R_end
+    400030: head
+    400032: head_end
+    400034: hips
+    400036: hips.001
+    400038: hips.002
+    400040: hips.003
+    400042: hips.004
+    400044: hips.005
+    400046: hips.006
+    400048: hips.007
+    400050: hips.007_end
+    400052: Lamia
+    400054: //RootNode
+    400056: Lamia_motion
+    400058: neck
+    400060: shoulder.L
+    400062: shoulder.R
+    400064: spine
+    400066: upper_arm.L
+    400068: upper_arm.R
+    4300000: Lamia
+    7400000: Lamia_motion|Attack_2
+    7400002: Lamia_motion|Attack_3
+    7400004: Lamia_motion|Damage
+    7400006: Lamia_motion|Dead
+    7400008: Lamia_motion|Idle
+    7400010: Lamia_motion|Attack_1
+    7400012: Lamia_motion|Walk
+    9500000: //RootNode
+    13700000: Lamia
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Lamia_motion|Attack_2
+      takeName: Lamia_motion|Attack_2
+      firstFrame: 10
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lamia_motion|Attack_3
+      takeName: Lamia_motion|Attack_3
+      firstFrame: 10
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lamia_motion|Damage
+      takeName: Lamia_motion|Damage
+      firstFrame: 10
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lamia_motion|Dead
+      takeName: Lamia_motion|Dead
+      firstFrame: 10
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lamia_motion|Idle
+      takeName: Lamia_motion|Idle
+      firstFrame: 11
+      lastFrame: 199
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lamia_motion|Attack_1
+      takeName: Lamia_motion|Attack_1
+      firstFrame: 10
+      lastFrame: 46
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lamia_motion|Walk
+      takeName: Lamia_motion|Walk
+      firstFrame: 30
+      lastFrame: 109
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Lamia
+        weight: 1
+      - path: Lamia_motion
+        weight: 1
+      - path: Lamia_motion/armIK.L
+        weight: 1
+      - path: Lamia_motion/armIK.L/armIK.L_end
+        weight: 1
+      - path: Lamia_motion/armIK.R
+        weight: 1
+      - path: Lamia_motion/armIK.R/armIK.R_end
+        weight: 1
+      - path: Lamia_motion/armPole.L
+        weight: 1
+      - path: Lamia_motion/armPole.L/armPole.L_end
+        weight: 1
+      - path: Lamia_motion/armPole.R
+        weight: 1
+      - path: Lamia_motion/armPole.R/armPole.R_end
+        weight: 1
+      - path: Lamia_motion/hips
+        weight: 1
+      - path: Lamia_motion/hips/hips.001
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007
+        weight: 1
+      - path: Lamia_motion/hips/hips.001/hips.002/hips.003/hips.004/hips.005/hips.006/hips.007/hips.007_end
+        weight: 1
+      - path: Lamia_motion/hips/spine
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/neck/head/head_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+        weight: 1
+      - path: Lamia_motion/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Lamia_motion
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

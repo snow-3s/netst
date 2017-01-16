@@ -12,7 +12,10 @@ public class PlayerParameter : Photon.MonoBehaviour{
         {
             this.role = role;
             //Notify Role
-            Debug.Log(role);
+            GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
+            GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
+            confirmer.GetComponent<Confirmer>().SetText("Role: " + role);
+            confirmer.GetComponent<Confirmer>().SetCallback(() => { Debug.Log(role); });            
         }
     }
 

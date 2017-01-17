@@ -5,8 +5,8 @@ using UnityEngine;
 public class DaytimePhase : Photon.MonoBehaviour {
 
     bool isInterrupted = false;
-    int frame = 0;
-    int maxFrame = 60 * 60 * 5;
+    float time = 0;
+    float timeLimit = 60 * 5;
 
     // Use this for initialization
     void Start () {
@@ -20,12 +20,12 @@ public class DaytimePhase : Photon.MonoBehaviour {
 
     void Update()
     {
-        frame++;
+        time += Time.deltaTime;
     }
 
     IEnumerator DaytimeEnd()
     {
-        yield return new WaitUntil(() => frame >= maxFrame || isInterrupted);
+        yield return new WaitUntil(() => time >= timeLimit || isInterrupted);
         GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().EndPhase();
         if (!isInterrupted)
         {

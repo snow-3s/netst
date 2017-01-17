@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class Notifier : MonoBehaviour
 {
     float time = 0;
-    float timeLimit = 2.5f;
+    float timeLimit = 3.5f;
 
     void Awake()
     {
         Transform cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
         Vector3 cameraPos = cameraTransform.position;
         Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
-        transform.position = cameraTransform.TransformDirection(Vector3.forward) * 0.5f + cameraPos;
+        transform.position = cameraTransform.TransformDirection(Vector3.forward) * 0.9f + cameraPos;
         transform.Rotate(new Vector3(0f, cameraRotation.y, 0f));
     }
 

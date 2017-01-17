@@ -10,7 +10,7 @@ public class Confirmer : MonoBehaviour {
         Transform cameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
         Vector3 cameraPos = cameraTransform.position;
         Vector3 cameraRotation = cameraTransform.rotation.eulerAngles;
-        transform.position = cameraTransform.TransformDirection(Vector3.forward)*0.5f + cameraPos;
+        transform.position = cameraTransform.TransformDirection(Vector3.forward)*0.9f + cameraPos;
         transform.Rotate(new Vector3(0f, cameraRotation.y, 0f));
     }
 

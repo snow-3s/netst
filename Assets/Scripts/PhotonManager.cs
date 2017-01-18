@@ -31,12 +31,12 @@ public class PhotonManager : Photon.MonoBehaviour
         Debug.Log("PhotonManager OnJoinedRoom");
         //player and vrcamera generate
 		int count = PhotonNetwork.playerList.Length;
-		int angle = 30;
+		int angle = 40;
         GameObject prefabCamera = (GameObject)Resources.Load("Prefabs/vrcamera");
         GameObject camera = (GameObject)Instantiate(prefabCamera, new Vector3(), Quaternion.identity);
         string[] avatarArray = { "man", "old_man", "old_man2", "old_woman" };
         string playerAvatarName = avatarArray[UnityEngine.Random.Range(0, avatarArray.Length)];
-		GameObject player = PhotonNetwork.Instantiate("Prefabs/Avatars/"+playerAvatarName, new Vector3(3 * Mathf.Sin(angle * count * (Mathf.PI / 180)), 0.1f, 3 * Mathf.Cos(angle * count * (Mathf.PI / 180))), Quaternion.identity, 0);
+		GameObject player = PhotonNetwork.Instantiate("Prefabs/Avatars/"+playerAvatarName, new Vector3(3.5f * Mathf.Sin(angle * count * (Mathf.PI / 180)), 0.1f, 3.5f * Mathf.Cos(angle * count * (Mathf.PI / 180))), Quaternion.identity, 0);
         GameObject head = player.transform.FindChild("head").gameObject;
         camera.GetComponent<PositionSynchronizer>().SetSyncTarget(head);
         //GameStarter generate as SceneObject

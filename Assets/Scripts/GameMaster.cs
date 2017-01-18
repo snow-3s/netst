@@ -56,7 +56,7 @@ public class GameMaster : Photon.MonoBehaviour
                     break;
 
                 case Phase.MORNING:
-                    PhotonNetwork.InstantiateSceneObject("Prefabs/Phases/DaytimePhase", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
+                    PhotonNetwork.InstantiateSceneObject("Prefabs/Phases/MorningPhase", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
                     break;
 
                 case Phase.DAYTIME:

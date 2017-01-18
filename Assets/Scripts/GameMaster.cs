@@ -40,7 +40,7 @@ public class GameMaster : Photon.MonoBehaviour
                 photonView.RPC("NotifyRole", PhotonTargets.All, participant);
             }
         }
-        nextPhase = Phase.START;
+        nextPhase = Phase.DAYTIME;
     }
 
     void Update()

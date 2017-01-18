@@ -15,6 +15,17 @@ public class NightPhase : Photon.MonoBehaviour
         GameObject notifier = Instantiate(prefabNotifier, new Vector3(), Quaternion.identity);
         notifier.GetComponent<Notifier>().SetText("人狼ターン");
         PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
+        StartCoroutine(DelayExec());
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+    IEnumerator DelayExec() {
+        yield return new WaitForSeconds(3);
         GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("werewolf", "VictimNotify");
         Dictionary<int, Participant> participants = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().GetParticipantsDictionary();
         if (participants[PhotonNetwork.player.ID].isSurvive())
@@ -40,10 +51,6 @@ public class NightPhase : Photon.MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     [PunRPC]
     public void VictimNotify(int playerId)

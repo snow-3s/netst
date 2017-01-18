@@ -11,14 +11,20 @@ public class MorningPhase : MonoBehaviour {
         notifier.GetComponent<Notifier>().SetText("占い師ターン");
 
         PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
-		GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("fortuneTeller", "TelleeRoleNotify");
 	}
 
 	// Update is called once per frame
 	void Update () {
 	}
 
-	[PunRPC]
+    IEnumerator DelayExec()
+    {
+        yield return new WaitForSeconds(3);
+        GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("fortuneTeller", "TelleeRoleNotify");
+
+    }
+
+    [PunRPC]
 	public void TelleeRoleNotify(int playerId)
 	{
 		Dictionary<int, Participant> participants = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().GetParticipantsDictionary();

@@ -16,20 +16,22 @@ public class NightPhase : Photon.MonoBehaviour
         Dictionary<int, Participant> participants = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().GetParticipantsDictionary();
         if (participants[PhotonNetwork.player.ID].isSurvive())
         {
-            if (participants[PhotonNetwork.player.ID].GetRole().Equals("werewolf"))
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
             {
-                //狼会話
-                PhotonVoiceNetwork.Client.GlobalAudioGroup = 2;
-            }
-            else
-            {
-                foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
+                if (PhotonNetwork.player.ID == obj.GetComponent<PhotonView>().ownerId)
                 {
-                    if (PhotonNetwork.player.ID == obj.GetComponent<PhotonView>().ownerId)
+                    if (participants[PhotonNetwork.player.ID].GetRole().Equals("werewolf"))
+                    {
+                        //狼会話
+                        PhotonVoiceNetwork.Client.GlobalAudioGroup = 2;
+                    }
+                    else
                     {
                         //音声を送信しない
                         obj.GetComponent<PhotonVoiceRecorder>().Transmit = false;
                     }
+                    //アバターの動きを共有しないように
+                    obj.GetComponent<PhotonView>().synchronization = ViewSynchronization.Off;
                 }
             }
         }
@@ -50,6 +52,8 @@ public class NightPhase : Photon.MonoBehaviour
                 {
                     //音声を再生できるように
                     obj.GetComponent<PhotonVoiceRecorder>().Transmit = true;
+                    //アバターの動きを共有するように
+                    obj.GetComponent<PhotonView>().synchronization = ViewSynchronization.UnreliableOnChange;
                 }
             }
             //全体の会話グループに

@@ -11,6 +11,9 @@ public class NightPhase : Photon.MonoBehaviour
     void Start()
     {
         victimPlayerId = 0;
+        GameObject prefabNotifier = (GameObject)Resources.Load("Prefabs/Notifier");
+        GameObject notifier = Instantiate(prefabNotifier, new Vector3(), Quaternion.identity);
+        notifier.GetComponent<Notifier>().SetText("人狼ターン");
         PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
         GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("werewolf", "VictimNotify");
         Dictionary<int, Participant> participants = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().GetParticipantsDictionary();

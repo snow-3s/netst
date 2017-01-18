@@ -40,8 +40,10 @@ public class Voter : Photon.MonoBehaviour
                 }
             }
         }
+
+        Dictionary<int, Participant> participantDictionary = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().GetParticipantsDictionary();
         //投票者のみ実行
-        if (votedRole.Equals("all") || votedRole.Equals(participants.First(elem => elem.GetPlayerId() == PhotonNetwork.player.ID).GetRole()))
+        if (votedRole.Equals("all") || participantDictionary[PhotonNetwork.player.ID].GetRole().Equals(votedRole))
         {
             selectAreas = new List<GameObject>();
             GameObject prefabSelectArea = (GameObject)Resources.Load("Prefabs/SelectArea");

@@ -72,12 +72,22 @@ public class GameMaster : Photon.MonoBehaviour
                     break;
 
                 case Phase.HUMAN_VICTORY:
-                    PhotonNetwork.InstantiateSceneObject("Prefabs/Phases/DaytimePhase", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
-                    break;
+                    {
+                        GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
+                        GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
+                        confirmer.GetComponent<Confirmer>().SetText("villager win!!!");
+                        EndPhase();
+                        break;
+                    }
 
                 case Phase.WERWOLF_VICTORY:
-                    PhotonNetwork.InstantiateSceneObject("Prefabs/Phases/DaytimePhase", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
-                    break;
+                    {
+                        GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
+                        GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
+                        confirmer.GetComponent<Confirmer>().SetText("werewolf win!!!");
+                        EndPhase();
+                        break;
+                    }
 
                 case Phase.END:
                     //会話グループを初期化
@@ -128,6 +138,40 @@ public class GameMaster : Photon.MonoBehaviour
         }
     }
 
+    bool isVillagerVictory()
+    {
+        int werewolfCount = 0;
+        foreach (Participant participant in participants.Values)
+        {
+            if (participant.isSurvive() && participant.isWerewolf())
+            {
+                werewolfCount++;
+            }
+        }
+        return werewolfCount == 0;
+    }
+
+    bool isWerewolfVictory()
+    {
+        int villagerCount = 0;
+        int werewolfCount = 0;
+        foreach(Participant participant in participants.Values)
+        {
+            if (participant.isSurvive())
+            {
+                if (participant.isWerewolf())
+                {
+                    werewolfCount++;
+                }
+                else
+                {
+                    villagerCount++;
+                }
+            }
+        }
+        return werewolfCount >= villagerCount;
+    }
+
     //Phase 更新
     public void EndPhase()
     {
@@ -150,11 +194,7 @@ public class GameMaster : Photon.MonoBehaviour
                 break;
 
             case Phase.NIGHT:
-                //勝敗判定
-                if (true)
-                    nextPhase = Phase.HUMAN_VICTORY;
-                else
-                    nextPhase = Phase.MORNING;
+                nextPhase = Phase.MORNING;
                 break;
 
             case Phase.HUMAN_VICTORY:
@@ -165,6 +205,15 @@ public class GameMaster : Photon.MonoBehaviour
                 nextPhase = Phase.END;
                 break;
         }
+        if (isVillagerVictory())
+        {
+            nextPhase = Phase.HUMAN_VICTORY;
+        }
+        else if (isWerewolfVictory())
+        {
+            nextPhase = Phase.WERWOLF_VICTORY;
+        }
+
     }
 
 }

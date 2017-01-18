@@ -76,7 +76,7 @@ public class GameMaster : Photon.MonoBehaviour
                         GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
                         GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
                         confirmer.GetComponent<Confirmer>().SetText("villager win!!!");
-                        EndPhase();
+                        nextPhase = Phase.END;
                         break;
                     }
 
@@ -85,7 +85,7 @@ public class GameMaster : Photon.MonoBehaviour
                         GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
                         GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
                         confirmer.GetComponent<Confirmer>().SetText("werewolf win!!!");
-                        EndPhase();
+                        nextPhase = Phase.END;
                         break;
                     }
 

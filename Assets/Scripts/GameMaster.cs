@@ -93,6 +93,13 @@ public class GameMaster : Photon.MonoBehaviour
                     //会話グループを初期化
                     PhotonVoiceNetwork.Client.ChangeAudioGroups(new byte[] { }, new byte[] { 0 });
                     PhotonVoiceNetwork.Client.GlobalAudioGroup = 0;
+                    foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
+                    {
+                        if (obj.GetComponent<PhotonView>().ownerId == PhotonNetwork.player.ID)
+                        {
+                            obj.GetComponent<Rigidbody>().useGravity = true;
+                        }
+                    }
                     //ゲームマスター削除,Starter 生成
                     PhotonNetwork.InstantiateSceneObject("Prefabs/GameStarter", new Vector3(0, 2.5f, 0), Quaternion.identity, 0, null);
                     PhotonNetwork.Destroy(gameObject);

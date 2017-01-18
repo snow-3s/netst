@@ -10,6 +10,7 @@ public class Voter : Photon.MonoBehaviour
     string votedRole;       //投票できる人
     string rpcCallBackName;     //投票結果を返す先
     Dictionary<int, int> votes;     //投票箱
+    int voterCount = 0;
     List<int> voters;               //投票者
     List<GameObject> selectAreas;   //選択エリア
     Participant[] participants;
@@ -37,6 +38,10 @@ public class Voter : Photon.MonoBehaviour
                 if (!participant.GetRole().Equals(votedRole) || votedRole.Equals("all"))
                 {
                     voters.Add(participant.GetPlayerId());
+                }
+                if (participant.GetRole().Equals(votedRole) || votedRole.Equals("all"))
+                {
+                    voterCount++;
                 }
             }
         }
@@ -70,7 +75,7 @@ public class Voter : Photon.MonoBehaviour
     IEnumerator Reception()
     {
         //時間経過 or 全員投票待ち
-        yield return new WaitUntil(() => frame >= maxFrame || votes.Count == voters.Count);
+        yield return new WaitUntil(() => frame >= maxFrame ||  votes.Count == voterCount);
         //投票結果から最も得票数の多い人を割り出す
         int targetPlayerId;
         if (votes.Count != 0)

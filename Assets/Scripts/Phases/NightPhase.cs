@@ -75,7 +75,15 @@ public class NightPhase : Photon.MonoBehaviour
         if (playerId != 0)
         {
             gameMaster.KillPlayer(victimPlayerId);
-            //演出
+            //退場演出
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                if (obj.GetComponent<PhotonView>().ownerId == victimPlayerId)
+                {
+                    obj.GetComponent<Rigidbody>().useGravity = false;
+                    obj.transform.position += new Vector3(0, 5.0f, 0);
+                }
+            }
         }
         gameMaster.EndPhase();
         PhotonNetwork.Destroy(gameObject);

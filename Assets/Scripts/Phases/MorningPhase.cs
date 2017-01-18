@@ -6,7 +6,6 @@ public class MorningPhase : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		telleePlayerId = 0;
 		PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
 		GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("fortuneTeller", "TelleeRoleNotify");
 	}
@@ -19,26 +18,35 @@ public class MorningPhase : MonoBehaviour {
 	public void TelleeRoleNotify(int playerId)
 	{
 		Dictionary<int, Participant> participants = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>().GetParticipantsDictionary();
-		GameMaster gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-		GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
-		GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
+        int telleePlayerId = 0;
+        foreach(Participant participant in participants.Values)
+        {
+            if (participant.GetRole().Equals("fortuneTeller"))
+            {
+                telleePlayerId = participant.GetPlayerId();
+                break;
+            }
+        }
+        GameMaster gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
 
+        playerId = 1;
 		if (playerId != 0)
 		{
-			if (GameObject.FindGameObjectWithTag ("GameMaster").GetComponent<GameMaster> ().GetParticipantsDictionary () [PhotonNetwork.player.ID].isSurvive ()) {
-				foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player")) {
-					if (PhotonNetwork.player.GetRole () == "fortuneTeller") {
-						if (Participants [playerId].GetRole ().Equals ("warewolf")) {    //白黒通知
-							confirmer.GetComponent<Confirmer> ().SetText ("Player" + playerId + ": " + "black");
-							confirmer.GetComponent<Confirmer> ().SetCallback (() => {
-								Debug.Log (Participants [playerId].GetRole ());
-							});
-						} else {
-							confirmer.GetComponent<Confirmer> ().SetText ("Player" + playerId + ": " + "white");
-							confirmer.GetComponent<Confirmer> ().SetCallback (() => {
-								Debug.Log (Participants [playerId].GetRole ());
-							});
-						}
+			if (participants[PhotonNetwork.player.ID].isSurvive ()) {
+			    if (PhotonNetwork.player.ID == telleePlayerId) {
+                    GameObject prefabConfirmer = (GameObject)Resources.Load("Prefabs/Confirmer");
+                    GameObject confirmer = Instantiate(prefabConfirmer, new Vector3(), Quaternion.identity);
+
+                    if (participants [playerId].GetRole ().Equals ("warewolf")) {    //白黒通知
+						confirmer.GetComponent<Confirmer> ().SetText ("Player" + playerId + ": " + "black");
+						confirmer.GetComponent<Confirmer> ().SetCallback (() => {
+							Debug.Log (participants [playerId].GetRole ());
+						});
+					} else {
+						confirmer.GetComponent<Confirmer> ().SetText ("Player" + playerId + ": " + "white");
+						confirmer.GetComponent<Confirmer> ().SetCallback (() => {
+							Debug.Log (participants [playerId].GetRole ());
+						});
 					}
 				}
 			}

@@ -10,6 +10,9 @@ public class DaytimePhase : Photon.MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        GameObject prefabNotifier = (GameObject)Resources.Load("Prefabs/Notifier");
+        GameObject notifier = Instantiate(prefabNotifier, new Vector3(), Quaternion.identity);
+        notifier.GetComponent<Notifier>().SetText("話し合い");
         StartCoroutine(DaytimeEnd());
         if (PhotonNetwork.isMasterClient)
         {

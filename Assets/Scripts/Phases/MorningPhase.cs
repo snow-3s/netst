@@ -6,7 +6,11 @@ public class MorningPhase : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
+        GameObject prefabNotifier = (GameObject)Resources.Load("Prefabs/Notifier");
+        GameObject notifier = Instantiate(prefabNotifier, new Vector3(), Quaternion.identity);
+        notifier.GetComponent<Notifier>().SetText("占い師ターン");
+
+        PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
 		GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("fortuneTeller", "TelleeRoleNotify");
 	}
 

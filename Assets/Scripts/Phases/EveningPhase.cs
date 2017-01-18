@@ -9,6 +9,9 @@ public class EveningPhase : Photon.MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         hangedPlayerId = 0;
+        GameObject prefabNotifier = (GameObject)Resources.Load("Prefabs/Notifier");
+        GameObject notifier = Instantiate(prefabNotifier, new Vector3(), Quaternion.identity);
+        notifier.GetComponent<Notifier>().SetText("吊りターン");
         PhotonNetwork.InstantiateSceneObject("Prefabs/Voter", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
         //投票開始
         GameObject.FindGameObjectWithTag("Voter").GetComponent<Voter>().Run("all", "HangmanNotify");

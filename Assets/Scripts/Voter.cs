@@ -34,7 +34,7 @@ public class Voter : Photon.MonoBehaviour
 
                 }
 
-                if (participant.GetRole().Equals(votedRole) || votedRole.Equals("all"))
+                if (!participant.GetRole().Equals(votedRole) || votedRole.Equals("all"))
                 {
                     voters.Add(participant.GetPlayerId());
                 }

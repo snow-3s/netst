@@ -9,6 +9,8 @@ TagManager:
   - Phase
   - Voter
   - Confirmer
+  - LoadNewScene
+  - GazeTrigger
   layers:
   - Default
   - TransparentFX
